@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeoutException;
 
-public class JserialConnTest {
+public class JserialCommTest {
     public enum DataBits {
         Eight(8);
 
@@ -231,15 +231,15 @@ public class JserialConnTest {
     }
 
     public static void main(String[] args) {
-        JserialConnTest jserialConnTest = new JserialConnTest();
+        JserialCommTest jserialCommTest = new JserialCommTest();
         try {
-            jserialConnTest.connect();
+            jserialCommTest.connect();
         } catch (Exception e) {
             e.printStackTrace();
         }
         while (true) {
             try {
-                jserialConnTest.readLine();
+                jserialCommTest.readLine();
             } catch (TimeoutException e) {
                 e.printStackTrace();
             } catch (IOException e) {
